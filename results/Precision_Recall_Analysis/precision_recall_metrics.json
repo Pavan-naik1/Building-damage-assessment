@@ -1,0 +1,29 @@
+[
+    {
+        "model": "CNN",
+        "test_samples": 1909,
+        "threshold_on_no_damage_probability": 0.5,
+        "damage_average_precision": 0.983218401205692,
+        "no_damage_average_precision": 0.9863726794038955,
+        "damage_recall_at_threshold": 0.9501525940996948,
+        "no_damage_recall_at_threshold": 0.9233261339092873
+    },
+    {
+        "model": "EfficientNetB0",
+        "test_samples": 1909,
+        "threshold_on_no_damage_probability": 0.55,
+        "damage_average_precision": 0.953190810740563,
+        "no_damage_average_precision": 0.9336113520899114,
+        "damage_recall_at_threshold": 0.8626653102746694,
+        "no_damage_recall_at_threshold": 0.9049676025917927
+    },
+    {
+        "model": "SegFormer",
+        "test_samples": 1909,
+        "threshold_on_no_damage_probability": 0.5,
+        "damage_average_precision": 0.9751378842856021,
+        "no_damage_average_precision": 0.9672158320868973,
+        "damage_recall_at_threshold": 0.9542217700915565,
+        "no_damage_recall_at_threshold": 0.8909287257019438
+    }
+]

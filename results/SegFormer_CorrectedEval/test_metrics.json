@@ -1,0 +1,58 @@
+{
+    "model": "SegFormer-inspired classifier",
+    "dataset": "data/clean_dataset",
+    "checkpoint": "results\\SegFormer_Clean\\best_segformer.pt",
+    "checkpoint_epoch": 7,
+    "best_validation_macro_f1": 0.9484825329196189,
+    "classes": [
+        "damage",
+        "no_damage"
+    ],
+    "image_size": 224,
+    "threshold_on_no_damage_probability": 0.5,
+    "test_samples": 1909,
+    "accuracy": 0.9235201676270298,
+    "macro_precision": 0.9255335037005078,
+    "macro_recall": 0.9225752478967502,
+    "macro_f1": 0.9232512518201785,
+    "weighted_f1": 0.9233868996165548,
+    "errors": 146,
+    "confusion_matrix": [
+        [
+            938,
+            45
+        ],
+        [
+            101,
+            825
+        ]
+    ],
+    "classification_report": {
+        "damage": {
+            "precision": 0.9027911453320501,
+            "recall": 0.9542217700915565,
+            "f1-score": 0.9277942631058358,
+            "support": 983.0
+        },
+        "no_damage": {
+            "precision": 0.9482758620689655,
+            "recall": 0.8909287257019438,
+            "f1-score": 0.9187082405345212,
+            "support": 926.0
+        },
+        "accuracy": 0.9235201676270298,
+        "macro avg": {
+            "precision": 0.9255335037005078,
+            "recall": 0.9225752478967502,
+            "f1-score": 0.9232512518201785,
+            "support": 1909.0
+        },
+        "weighted avg": {
+            "precision": 0.9248544495218792,
+            "recall": 0.9235201676270298,
+            "f1-score": 0.9233868996165548,
+            "support": 1909.0
+        }
+    },
+    "roc_auc": 0.9742518055320579
+}

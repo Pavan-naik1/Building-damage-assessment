@@ -1,0 +1,30 @@
+{
+  "model": "SegFormer-inspired classifier",
+  "dataset": "data/clean_dataset",
+  "test_samples": 1909,
+  "classes": [
+    "damage",
+    "no_damage"
+  ],
+  "image_size": 224,
+  "threshold_on_no_damage_probability": 0.5,
+  "accuracy": 0.5154531168150864,
+  "macro_precision": 0.7575995807127882,
+  "macro_recall": 0.5005399568034558,
+  "macro_f1": 0.34109950271590184,
+  "weighted_f1": 0.35121982451188305,
+  "roc_auc": 0.4599591544375331,
+  "errors": 925,
+  "confusion_matrix": [
+    [
+      983,
+      0
+    ],
+    [
+      925,
+      1
+    ]
+  ],
+  "best_epoch": 7,
+  "best_validation_macro_f1": 0.9484825329196189
+}

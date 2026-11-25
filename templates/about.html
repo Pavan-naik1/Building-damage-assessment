@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}About | DamageAI{% endblock %}
+{% block content %}
+<section class="page-head">
+    <span class="eyebrow">About the project</span>
+    <h1>AI-Based Building Damage Classification</h1>
+    <p>
+        This application integrates a TensorFlow/Keras SegFormer-style image
+        classifier with Flask, HTML, CSS, JavaScript and SQLite.
+    </p>
+</section>
+
+<section class="feature-grid">
+    <article class="card">
+        <h3>Input</h3>
+        <p>A user uploads a building image in JPG, JPEG, PNG or WEBP format.</p>
+    </article>
+    <article class="card">
+        <h3>Processing</h3>
+        <p>The image is resized to 224 × 224 and passed to the trained classifier.</p>
+    </article>
+    <article class="card">
+        <h3>Output</h3>
+        <p>The system displays class prediction, confidence and activation heatmap.</p>
+    </article>
+</section>
+{% endblock %}

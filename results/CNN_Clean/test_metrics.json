@@ -1,0 +1,37 @@
+{
+    "model": "CNN",
+    "dataset": "clean_dataset/test",
+    "test_samples": 1909,
+    "class_order": [
+        "damage",
+        "no_damage"
+    ],
+    "positive_class_for_auc": "no_damage (class 1)",
+    "threshold": 0.5,
+    "accuracy": 0.927710843373494,
+    "macro_precision": 0.9291600406396325,
+    "macro_recall": 0.9269262121288689,
+    "macro_f1": 0.9274997853411096,
+    "weighted_f1": 0.9276165844464096,
+    "roc_auc": 0.9816348771447216,
+    "damage_precision": 0.9105928085519922,
+    "damage_recall": 0.953204476093591,
+    "damage_f1": 0.9314115308151093,
+    "no_damage_precision": 0.9477272727272728,
+    "no_damage_recall": 0.9006479481641468,
+    "no_damage_f1": 0.9235880398671097,
+    "confusion_matrix_labels": [
+        "damage",
+        "no_damage"
+    ],
+    "confusion_matrix": [
+        [
+            937,
+            46
+        ],
+        [
+            92,
+            834
+        ]
+    ]
+}

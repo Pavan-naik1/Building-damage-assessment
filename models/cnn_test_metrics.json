@@ -1,0 +1,9 @@
+{
+  "test_samples": 2000,
+  "threshold": 0.5,
+  "accuracy": 0.916,
+  "macro_precision": 0.9163263998975197,
+  "macro_recall": 0.916,
+  "macro_f1": 0.9159835327724234,
+  "roc_auc": 0.977232
+}

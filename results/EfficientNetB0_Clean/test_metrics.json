@@ -1,0 +1,38 @@
+{
+    "model": "EfficientNetB0",
+    "dataset": "clean_dataset/test",
+    "test_samples": 1909,
+    "class_order": [
+        "damage",
+        "no_damage"
+    ],
+    "threshold": 0.53,
+    "threshold_selection_dataset": "clean_dataset/validation",
+    "threshold_selection_metric": "macro_f1",
+    "accuracy": 0.9324253535882661,
+    "macro_precision": 0.9323007829228387,
+    "macro_recall": 0.9325059488628499,
+    "macro_f1": 0.932382604283333,
+    "weighted_f1": 0.932433369082941,
+    "roc_auc": 0.9781633339119239,
+    "damage_precision": 0.9383983572895277,
+    "damage_recall": 0.9298067141403866,
+    "damage_f1": 0.9340827797649464,
+    "no_damage_precision": 0.9262032085561497,
+    "no_damage_recall": 0.9352051835853131,
+    "no_damage_f1": 0.9306824288017195,
+    "confusion_matrix_labels": [
+        "damage",
+        "no_damage"
+    ],
+    "confusion_matrix": [
+        [
+            914,
+            69
+        ],
+        [
+            60,
+            866
+        ]
+    ]
+}

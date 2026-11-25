@@ -1,0 +1,27 @@
+{
+  "test_samples": 2000,
+  "input_size": [
+    128,
+    128
+  ],
+  "threshold_selected_on_validation": 0.5599999999999997,
+  "class_indices": {
+    "damage": 0,
+    "no_damage": 1
+  },
+  "accuracy": 0.9395,
+  "macro_precision": 0.9395109877746943,
+  "macro_recall": 0.9395,
+  "macro_f1": 0.9394996218726367,
+  "roc_auc": 0.980038,
+  "confusion_matrix": [
+    [
+      937,
+      63
+    ],
+    [
+      58,
+      942
+    ]
+  ]
+}

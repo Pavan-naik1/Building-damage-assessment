@@ -1,0 +1,11 @@
+{
+  "model": "CNN",
+  "dataset": "data\\clean_dataset",
+  "test_images": 1909,
+  "threshold": 0.5,
+  "accuracy": 0.9371398638030383,
+  "macro_precision": 0.937510866957626,
+  "macro_recall": 0.9367706738089641,
+  "macro_f1": 0.9370374279344054,
+  "roc_auc": 0.9863588125564401
+}

@@ -1,0 +1,1 @@
+Copy segformer_damage_classifier.keras into this folder.

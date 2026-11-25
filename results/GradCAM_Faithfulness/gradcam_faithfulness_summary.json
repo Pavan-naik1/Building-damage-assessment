@@ -1,0 +1,14 @@
+{
+    "model": "CNN",
+    "gradcam_layer": "conv2d_5",
+    "evaluated_images": 50,
+    "requested_images": 50,
+    "samples_per_class": 25,
+    "steps": 10,
+    "baseline_value": 0.5,
+    "deletion_auc_mean": 0.5876570378261604,
+    "deletion_auc_std": 0.3723077947136197,
+    "insertion_auc_mean": 0.7026136052800213,
+    "insertion_auc_std": 0.31843517050032455,
+    "interpretation": "Lower deletion AUC and higher insertion AUC are generally consistent with stronger faithfulness under this perturbation procedure. These measurements do not establish spatial localization."
+}

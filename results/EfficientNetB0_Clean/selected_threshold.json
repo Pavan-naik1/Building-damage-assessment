@@ -1,0 +1,6 @@
+{
+    "selection_dataset": "clean_dataset/validation",
+    "selection_metric": "macro_f1",
+    "selected_threshold": 0.53,
+    "validation_macro_f1": 0.9449200669095958
+}

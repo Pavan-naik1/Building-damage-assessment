@@ -1,0 +1,113 @@
+
+{% extends "base.html" %}
+{% block title %}Prediction | DamageAI{% endblock %}
+
+{% block content %}
+<section class="page-head">
+    <span class="eyebrow">Model inference</span>
+    <h1>Damage Prediction</h1>
+    <p>
+        Upload one building image to generate a CNN-based classification,
+        saliency map, and Grad-CAM-style visualization.
+    </p>
+</section>
+
+<section class="predict-layout">
+    <form class="upload-card" method="POST" enctype="multipart/form-data">
+        <div id="dropZone" class="drop-zone">
+            <input
+                id="imageInput"
+                type="file"
+                name="image"
+                accept=".png,.jpg,.jpeg,.webp"
+                required
+            >
+            <div>
+                <strong>Choose a building image</strong>
+                <p>JPG, JPEG, PNG or WEBP · maximum 10 MB</p>
+            </div>
+        </div>
+
+        <img
+            id="preview"
+            class="preview hidden"
+            alt="Selected image preview"
+        >
+
+        <button class="btn primary full" type="submit">
+            Analyze Image
+        </button>
+    </form>
+
+    <div class="info-card">
+        <h3>Prediction workflow</h3>
+        <ol>
+            <li>Resize image to 128 × 128</li>
+            <li>Run CNN damage classification</li>
+            <li>Show predicted class and confidence</li>
+            <li>Generate Saliency Map</li>
+            <li>Generate Grad-CAM-style visualization</li>
+        </ol>
+    </div>
+</section>
+
+{% if result %}
+<section class="result-section">
+    <div class="result-summary {{ 'danger-result' if result.prediction == 'Damage' else 'safe-result' }}">
+        <span>Prediction</span>
+        <h2>{{ result.prediction }}</h2>
+        <strong>{{ result.confidence }}% confidence</strong>
+    </div>
+
+    <div class="prob-grid">
+        <div class="card">
+            <span>Damage probability</span>
+            <h3>{{ result.probability_damage }}%</h3>
+        </div>
+
+        <div class="card">
+            <span>No Damage probability</span>
+            <h3>{{ result.probability_no_damage }}%</h3>
+        </div>
+    </div>
+
+    <div class="visual-grid visual-grid-three">
+        <article class="image-card">
+            <h3>Uploaded Image</h3>
+            <img
+                src="{{ result.image_url }}"
+                alt="Uploaded building image"
+            >
+            <p class="muted">
+                Original input image used for prediction.
+            </p>
+        </article>
+
+        <article class="image-card">
+            <h3>Saliency Map</h3>
+            <img
+                src="{{ result.saliency_url }}"
+                alt="Saliency map showing input sensitivity"
+            >
+            <p class="muted">
+                Highlights input regions whose pixel changes most
+                influence the predicted class.
+            </p>
+        </article>
+
+        <article class="image-card">
+            <h3>Grad-CAM-style Heatmap</h3>
+            <img
+                src="{{ result.gradcam_url }}"
+                alt="Prediction explanation heatmap"
+            >
+            <p class="muted">
+                Overlays a heatmap on the input image to help visualize
+                regions that may influence the prediction. This
+                visualization may use a gradient-based fallback.
+            </p>
+        </article>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

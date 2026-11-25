@@ -1,0 +1,23 @@
+{
+  "model": "EfficientNetB0",
+  "dataset": "clean_dataset",
+  "class_order": [
+    "damage",
+    "no_damage"
+  ],
+  "input_size": [
+    128,
+    128
+  ],
+  "batch_size": 32,
+  "threshold": 0.55,
+  "threshold_selection": "validation macro-F1",
+  "test_samples": 1909,
+  "accuracy": 0.8831849135673128,
+  "macro_precision": 0.8836183800212577,
+  "macro_recall": 0.883816456433231,
+  "macro_f1": 0.8831817080435906,
+  "weighted_f1": 0.8831999795288067,
+  "roc_auc": 0.9449068286134261,
+  "test_errors": 223
+}

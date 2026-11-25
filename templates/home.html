@@ -1,0 +1,68 @@
+
+{% extends "base.html" %}
+{% block title %}Home | DamageAI{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div>
+        <span class="eyebrow">AI-powered inspection</span>
+        <h1>Building Damage Classification</h1>
+        <p>
+            Upload a building image and let the trained convolutional neural
+            network (CNN) classify it as Damage or No Damage, with prediction
+            confidence, a saliency map, and a Grad-CAM-style visualization.
+        </p>
+
+        <div class="actions">
+            {% if session.get('user_id') %}
+                <a class="btn primary" href="{{ url_for('prediction') }}">
+                    Start Prediction
+                </a>
+            {% else %}
+                <a class="btn primary" href="{{ url_for('register') }}">
+                    Create Account
+                </a>
+                <a class="btn secondary" href="{{ url_for('login') }}">
+                    Login
+                </a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="metric">128 × 128</div>
+        <p>Model input size</p>
+
+        <div class="metric">2 Classes</div>
+        <p>Damage / No Damage</p>
+
+        <div class="metric">Saliency + Heatmap</div>
+        <p>Visual model explanation</p>
+    </div>
+</section>
+
+<section class="feature-grid">
+    <article class="card">
+        <h3>Secure Access</h3>
+        <p>
+            Register and log in using password hashing and SQLite storage.
+        </p>
+    </article>
+
+    <article class="card">
+        <h3>CNN Prediction</h3>
+        <p>
+            Classify building images using the trained CNN model integrated
+            with the Flask application.
+        </p>
+    </article>
+
+    <article class="card">
+        <h3>Visual Explanation</h3>
+        <p>
+            View saliency and gradient-based heatmap visualizations to
+            inspect image regions that may influence the prediction.
+        </p>
+    </article>
+</section>
+{% endblock %}

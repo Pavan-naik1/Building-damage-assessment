@@ -1,0 +1,65 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+
+# Dataset
+data/
+archive/
+
+# Model weights
+*.pth
+*.pt
+*.h5
+*.keras
+*.weights
+
+# Local database
+users.db
+*.db
+
+# Large archives
+*.zip
+
+# Temporary and backup files
+*.backup
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+env.txt
+
+# Private or image-level analysis data
+results/Geographic_Analysis/*.csv
+results/Precision_Recall_Analysis/all_model_test_predictions.csv
+**/wrongly_predicted*.csv
+**/wrong_predictions.csv
+
+# Obsolete backup scripts
+app_before_gradcam_fix.py
+evaluate_segformer_clean_backup.py
+evaluate_segformer_clean_before_fix.py
+
+# Runtime-generated user images and explainability outputs
+static/uploads/*
+!static/uploads/.gitkeep
+
+static/heatmaps/*
+!static/heatmaps/.gitkeep
+
+# Image-level analysis files
+**/wrongly_predicted*.csv
+**/wrong_predictions.csv
+**/coordinate_audit.csv
+**/cross_split_coordinates.csv
+**/nearby_cross_split_pairs_50m.csv
+**/cross_split_matches.csv
+**/same_split_matches.csv
+**/all_model_test_predictions.csv
+**/phash_contact_sheet.jpg
